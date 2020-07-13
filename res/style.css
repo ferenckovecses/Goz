@@ -1,0 +1,536 @@
+/* CSS Variables */
+:root{
+  --dark: #171616;
+}
+
+@font-face
+{
+	font-family: 'Arial';
+	src: url(arial.ttf);
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial';
+	background: #cfcfe1;
+	color: #666666;
+}
+
+a
+{
+	text-decoration: none;
+	color: var(--dark);
+	font-weight: 900;
+}
+
+/* HEADER */
+	header
+	{
+		float: left;
+		width: 100%;
+	}
+		.header {
+		  padding: 0px;
+		  background: var(--dark);
+		  color: #f1f1f1;
+		}
+
+		/* Page content */
+		.content {
+		  padding: 16px;
+		}
+
+		/* The sticky class is added to the header with JS when it reaches its scroll position */
+		.sticky {
+		  position: fixed;
+		  top: 1;
+		  width: 100%
+		}
+
+		/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+		.sticky + .content {
+		  padding-top: 102px;
+		}
+		
+		.himgcont
+		{
+			width: 100%;
+			height: 350px;
+			background-color: var(--dark);
+		}
+		.headerImage
+		{
+			display: block;
+			margin-left: auto;
+  			margin-right: auto;
+			max-width: 100%;
+			background-position: 50% 80%;
+			background-size: cover;
+		}
+			
+
+/* HEADER - MENU */
+
+	header nav
+	{
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background: var(--dark);
+	}
+		header nav ul
+		{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+		}
+			header nav ul li
+			{
+				display: inline-block;
+				width: 15%;
+			}
+				header nav ul li a
+				{
+					display: inline-block;
+					text-decoration: none;
+					padding: 20px 0;
+					width: 100%;
+					color: #c3beb8;
+					transition: background 0.3s, color 0.3s;
+					font-size: 16px;
+					text-transform: uppercase;
+				}
+				header nav ul li a:hover
+				{
+					background: #323232;
+					color: #f2f0ef;
+				}
+
+/* MAIN */
+
+	#page
+	{
+		float: left;
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+		#content
+		{
+			float: left;
+			width: 74%;
+			min-height: 500px;
+		}
+			#content section,
+			#content article,
+			#content > ul
+			{
+				float: left;
+				width: 95%;
+				margin-left: 2.5%;
+				margin-right: 2.5%;
+				margin-top: 0;
+			}
+		aside
+		{
+			float: right;
+			width: 25%;
+			min-height: 500px;
+		}
+
+/* CONTENT - ARTICLE */
+
+	#content h1,
+	#content article h2
+	{
+		border-bottom: 1px solid var(--dark);
+		color: var(--dark);
+		padding-bottom: 5px;
+		float: left;
+		margin: 0;
+		margin-bottom: 25px;
+		width: 100%;
+		font-size: 18px;
+	}
+	#content h1,
+	#content > p
+	{
+		width: 100%;
+		float: left;
+		margin-top: 0;
+	}
+	#content section h2,
+	#content article h2
+	{
+		font-size: 16px;
+		border-bottom: none;
+		padding: 0;
+	}
+	#content section h2,
+	#content ul h2
+	{
+		color: var(--dark);
+		margin: 0;
+		margin-bottom: 25px;
+		font-size: 18px;
+	}
+	#content section h3
+	{
+		color: var(--dark);
+		font-size: 15px;
+		border-bottom: none;
+		padding: 0;
+	}
+	#content article p,
+	#content article ul,
+	#content section ul
+	{
+		float: left;
+		margin: 0;
+		margin-bottom: 25px;
+		width: 100%;
+		font-size: 15px;
+		text-align: justify;
+		color: var(--dark);
+	}
+	#content > p
+	{
+		margin-bottom: 30px;
+	}
+		#content article ul li,
+		#content section ul li
+		{
+			margin-bottom: 10px;
+		}
+	#content article h2.lead
+	{
+		float: left;
+		margin: 0;
+		margin-bottom: 25px;
+		width: 100%;
+		font-size: 16px;
+		text-align: left;
+		color: var(--dark);
+	}
+	#content article img
+	{
+		width: 100%;
+		float: left;
+		margin-bottom: 25px;
+	}
+
+/* CONTENT - ARTICLE PREVIEW */
+
+	#content ul.articles
+	{
+		padding: 0;
+		list-style: none;
+	}
+		#content .articles .preview
+		{
+			background: #ffffff;
+			border: 1px solid #dad8d4;
+			float: left;
+			height: 175px;
+			margin-bottom: 25px;
+		}
+			#content .articles .preview > img
+			{
+				width: 30%;
+				float: left;
+				height: 100%;
+				object-fit: cover;
+			}
+			#content .articles .preview > div
+			{
+				width: 65%;
+				padding-right: 2%;
+				float: right;
+				height: 150px;
+				overflow: hidden;
+			}
+				#content .articles .preview > div h2
+				{
+					margin-bottom: 10px;
+					margin-top: 15px;
+				}
+				#content .articles .preview > div p
+				{
+					margin: 0;
+				}
+			#content .articles .preview > a
+			{
+				display: inline-block;
+				float: right;
+				font-size: 13px;
+				text-decoration: none;
+				margin-right: 2%;
+				color: #345f6f;
+			}
+			#content .articles .preview > a:hover
+			{
+				text-decoration: underline;
+			}
+
+
+/* CONTENT - TABLE */
+
+	#content table
+	{
+		width: 95%;
+		float: left;
+		margin-bottom: 30px;
+		border-collapse: separate;
+		border-spacing: 0;
+	}
+		#content table tbody tr:nth-child(odd)
+		{
+			background: rgba(255,255,255,0.5);
+		}
+		#content table tbody tr:nth-child(even)
+		{
+			background: rgba(0,0,0,0.025);
+		}
+		#content table tbody tr:nth-child(odd):hover
+		{
+			background: rgba(255,255,255,0.8);
+		}
+		#content table tbody tr:nth-child(even):hover
+		{
+			background: rgba(0,0,0,0.005);
+		}
+			#content table thead th
+			{
+				text-align: center;
+				font-size: 15px;
+				border-bottom: 1px solid #dddddd;
+				border-top: 1px solid #dddddd;
+			}
+			#content table th,
+			#content table td
+			{
+				padding: 5px 10px;
+			}
+			#content table tbody th,
+			#content table tbody td
+			{
+				font-size: 14px;
+			}
+			#content table .italic
+			{
+				font-size: 13px;
+				font-style: italic;
+			}
+			#content table td a
+			{
+				color: #5fa9c4;
+				text-decoration: none;
+			}
+			#content table td a:hover
+			{
+				color: #345f6f;
+			}
+
+/* CONTENT - FORM */
+
+	#content form
+	{
+		float: left;
+		width: 90%;
+		margin-bottom: 30px;
+		background: rgba(255,255,255,0.5);
+		padding: 20px 3%;
+	}
+		#content form label
+		{
+			clear: both;
+			float: left;
+			font-size: 14px;
+		}
+		#content form input,
+		#content form select,
+		#content form textarea
+		{
+			clear: both;
+			float: left;
+			margin-bottom: 15px;
+			width: 98%;
+			border: 2px solid #cfcfe1;
+			padding: 7px 1%;
+			color: #666666;
+		}
+		#content form textarea
+		{
+			height: 50px;
+			resize: none;
+		}
+		#inputName
+		{
+			max-width: 300px;
+		}
+		#inputEmail
+		{
+			max-width: 500px;
+		}
+		#inputSubject
+		{
+			max-width: 200px;
+		}
+		#content form input[type=submit]
+		{
+			width: auto;
+			cursor: pointer;
+			padding: 7px 20px;
+			background: #cfcfe1;
+		}
+		#content form input[type=submit]:hover
+		{
+			background: #c3beb8;
+		}
+		#content p.success
+		{
+			background: #e6ebe1;
+			color: #82aa73;
+			border: 1px solid #d2e1cd;
+			padding-left: 2%;
+			padding-right: 2%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 96%;
+		}
+		#content p.error
+		{
+			background: #ece0e0;
+			color: #a97171;
+			border: 1px solid #e1cece;
+			padding-left: 2%;
+			padding-right: 2%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 96%;
+		}
+
+/* SIDEBAR - SECTION */
+
+	aside section
+	{
+		float: left;
+		width: 100%;
+		margin-bottom: 30px;
+		padding-bottom: 0px;
+		background: #dfdfdf;
+	}
+		aside section h3
+		{
+			float: left;
+			margin: 0;
+			margin-bottom: 10px;
+			background: var(--dark);
+			width: 96%;
+			color: white;
+			font-size: 16px;
+			padding: 5px 2%;
+		}
+		aside section p
+		{
+			float: left;
+			margin: 0;
+			margin-bottom: 10px;
+			width: 92%;
+			color: var(--dark);
+			font-size: 16px;
+			padding: 5px 4%;
+		}
+		aside section img
+		{
+			width: 95%;
+		}
+		aside section a
+		{
+			color: var(--dark);
+			text-decoration: none;
+		}
+		aside section a:hover
+		{
+			color: #323232;
+		}
+aside input[type=submit]
+{
+	clear: both;
+	float: left;
+	margin-bottom: 15px;
+	width: 100%;
+	cursor: pointer;
+	padding: 7px 20px;
+	border: 1px solid #dad8d4;
+	color: #666666;
+}
+aside input[type=submit]:hover
+{
+	background: #c3beb8;
+}
+
+
+/* FOOTER */
+
+	footer
+	{
+		float: left;
+		width: 100%;
+		background: var(--dark);
+		padding-top: 30px;
+		padding-bottom: 50px;
+		color: #dad8d4;
+	}
+		footer .left
+		{
+			width: 49%;
+			float: left;
+		}
+		footer .right
+		{
+			width: 49%;
+			float: right;
+			text-align: right;
+		}
+			footer h4
+			{
+				margin: 0;
+				margin-bottom: 15px;
+				font-size: 15px;
+			}
+			footer p
+			{
+				margin: 0;
+				font-size: 13px;
+				margin-bottom: 15px;
+			}
+			footer ul
+			{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			footer ul a
+			{
+				color: #dad8d4;
+				font-size: 13px;
+				text-decoration: none;
+			}
+			footer ul a:hover
+			{
+				text-decoration: underline;
+			}
+
+/* LAYOUT */
+
+	.centerBox
+	{
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}

@@ -1,0 +1,18 @@
+body
+{
+  margin: 0px 100px;
+  background-color: #ff4e4e;
+  color: white;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.home
+{
+  background-color: green;
+}
