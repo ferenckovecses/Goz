@@ -3,7 +3,11 @@
 
 Tartalma:
 -Bejelentkező form
+
 -Regisztrációs form
+
 -Főoldal
+
 -MySQL Adatbázis kapcsolat
+
 -MySQL adatbázisba a táblák létrehozása az admin felülettel.
